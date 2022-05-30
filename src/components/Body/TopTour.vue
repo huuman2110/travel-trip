@@ -20,10 +20,24 @@
             </div>
           </div>
         </div>
+        <template #prevArrow="arrowOption">
+          <div class="custom-arrow">
+            {{ arrowOption.currentSlide }}/{{ arrowOption.slideCount }}
+          </div>
+        </template>
+        <template #nextArrow="arrowOption">
+          <div class="custom-arrow">
+            {{ arrowOption.currentSlide }}/{{ arrowOption.slideCount }}
+          </div>
+        </template>
       </VueSlickCarousel>
     </div>
     <div class="toptour-list">
-      <div class="toptour-list-item" v-for="(item, index) in dataTopTour_mb" :key="index">
+      <div
+        class="toptour-list-item"
+        v-for="(item, index) in dataTopTour_mb"
+        :key="index"
+      >
         <img :src="item.img" alt="" />
         <div class="item-detail d-flex flex-column justify-content-between">
           <span>{{ item.country }}</span>
@@ -124,7 +138,8 @@ export default {
           country: "Spain",
           name: "Barcelona",
           amount: "10 Popular Places",
-        },]
+        },
+      ],
     };
   },
   components: { VueSlickCarousel },
@@ -169,6 +184,33 @@ export default {
     width: 100%;
     @media (max-width: 450px) {
       display: none;
+    }
+    .slick-prev {
+      background: #f4f5f6;
+      border: 1px solid #e6e8ec;
+      right: 65px;
+      left: unset;
+      color: #b1b5c4;
+    }
+    .slick-arrow {
+      width: 36px;
+      height: 30px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -100px;
+      color: #84878b;
+    }
+    .slick-next {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      background: #e6e8ec !important;
+      border: 1px solid #e6e8ec !important;
+      right: 20px;
     }
     &-item {
       position: relative;

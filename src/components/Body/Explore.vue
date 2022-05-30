@@ -244,21 +244,31 @@ export default {
       display: none;
     }
     .slick-prev {
-      background: #f4f5f6 !important;
-      border: 1px solid #e6e8ec !important;
-      color: #b1b5c4 !important;
+      background: #f4f5f6;
+      border: 1px solid #e6e8ec;
+      right: 65px;
+      left: unset;
+      color: #b1b5c4;
     }
-    // .slick-arrow {
-    //   height: 36px;
-    //   width: 36px;
-    // }
+    .slick-arrow {
+      width: 36px;
+      height: 30px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -100px;
+      color: #84878b;
+    }
     .slick-next {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 100%;
       background: #e6e8ec !important;
       border: 1px solid #e6e8ec !important;
+      right: 20px;
     }
   }
   &-list {

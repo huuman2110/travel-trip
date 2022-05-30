@@ -309,7 +309,7 @@ export default {
               width: 100%;
               justify-content: space-between;
               svg {
-                font-size: 18px;
+                font-size: 16px;
               }
             }
             .search-room {

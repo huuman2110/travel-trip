@@ -113,7 +113,7 @@
                       ></font-awesome-icon>
                       <div
                         class="item-detail"
-                        v-on:click="fieldInput(item.name, item.subname)"
+                        v-on:click="fieldInput(item.name, item.subname), isShowLocation = false "
                       >
                         <p class="item-detail-name">{{ item.name }}</p>
                         <p class="item-detail-subname">

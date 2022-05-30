@@ -17,6 +17,7 @@
               <p class="bestplace-item-name">{{ item.name }}</p>
               <p class="bestplace-item-des">{{ item.des }}</p>
             </div>
+            <span v-if="item.hot === 1">HOT</span>
           </div>
         </b-col>
       </b-row>
@@ -41,41 +42,49 @@ export default {
           img: place1,
           name: "Batu, East Java",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place2,
           name: "Kuta",
           des: "86 Destinations",
+          hot: 1,
         },
         {
           img: place3,
           name: "Surabaya, East Java",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place4,
           name: "Malang, East Java",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place4,
           name: "Dieng, Central Java",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place3,
           name: "Nusa Dua, Lombok",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place2,
           name: "Bandung, West Java",
           des: "86 Destinations",
+          hot: 0,
         },
         {
           img: place1,
           name: "Wakatobi, Sumatera",
           des: "86 Destinations",
+          hot: 0,
         },
       ],
     };
@@ -142,6 +151,7 @@ export default {
       }
     }
     &-item {
+      position: relative;
       height: 205px;
       border-radius: 10px;
       border: 1px solid #e7ecf3;
@@ -185,6 +195,42 @@ export default {
             font-size: 14px;
           }
         }
+      }
+      span {
+        position: absolute;
+        top: 30px;
+        right: 33px;
+        background-color: #ee6d52;
+        height: 14px;
+        width: 50px;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+        line-height: normal;
+        color: white;
+        @media (max-width: 450px) {
+            display: none;
+          }
+      }
+      span::after {
+        content: "";
+        position: absolute;
+        left: -7px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 7px solid #ee6d52;
+        border-bottom: 7px solid transparent;
+      }
+      span::before {
+        content: "";
+        position: absolute;
+        right: -7px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-left: 7px solid #ee6d52;
+        border-bottom: 7px solid transparent;
       }
     }
   }

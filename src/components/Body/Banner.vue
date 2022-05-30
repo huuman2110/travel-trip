@@ -305,6 +305,9 @@ export default {
             font-weight: bold;
             column-gap: 32px;
             color: #3b3e44;
+            svg {
+                font-size: 18px;
+              }
             @media (max-width: 450px) {
               width: 100%;
               justify-content: space-between;

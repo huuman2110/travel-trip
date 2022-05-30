@@ -64,12 +64,19 @@ export default {
         height: 38px;
         width: 40px;
         margin-right: 10px;
+        @media (max-width: 450px) {
+          height: 28px;
+          width: 28px;
+        }
       }
       span {
         color: #222529;
         font-family: "Poppins", sans-serif;
         font-size: 20px;
         font-weight: 700;
+        @media (max-width: 450px) {
+          font-size: 12px;
+        }
       }
     }
     .header-right {
@@ -79,13 +86,23 @@ export default {
         color: #84878b;
         font-size: 14px;
         height: 32px;
+        @media (max-width: 450px) {
+          font-size: 12px;
+        }
         img {
           margin: 0 15px;
+          @media (max-width: 450px) {
+            height: 16px;
+            width: 16px;
+          }
         }
         .noti {
           position: relative;
           svg {
             font-size: 17px;
+            @media (max-width: 450px) {
+              font-size: 14px;
+            }
           }
           span {
             position: absolute;
@@ -117,6 +134,10 @@ export default {
         img {
           height: 32px;
           width: 32px;
+          @media (max-width: 450px) {
+            height: 28px;
+            width: 28px;
+          }
         }
       }
     }
